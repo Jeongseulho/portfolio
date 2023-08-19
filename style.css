@@ -131,6 +131,7 @@ h3 {
   text-align: center;
 }
 
+/* 교육 이력 */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -191,4 +192,36 @@ h3 {
 .event.left::before {
   right: -10px;
   left: unset;
+}
+
+/* 기술 스택 */
+.skill .tabs {
+  display: flex;
+}
+
+.skill .tab-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+.skill .tab-button:hover {
+  background: #eee;
+}
+
+.skill .tab-content {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: #fff;
+  color: #444;
+}
+
+.skill .tab-panel {
+  display: none;
+}
+
+/* 첫 번째 탭 패널을 기본적으로 표시합니다. */
+.skill .tab-panel:first-child {
+  display: block;
 }

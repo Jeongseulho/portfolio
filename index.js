@@ -38,3 +38,10 @@ document.querySelector('.go-blog').addEventListener('click', function () {
     behavior: 'smooth',
   });
 });
+
+function showTab(index) {
+  const panels = document.querySelectorAll('.tab-panel');
+  panels.forEach((panel, i) => {
+    panel.style.display = i === index ? 'block' : 'none';
+  });
+}
