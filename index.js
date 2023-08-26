@@ -39,9 +39,24 @@ document.querySelector('.go-blog').addEventListener('click', function () {
   });
 });
 
+document.querySelector('.tab-menu').addEventListener('click', function (e) {
+  if (e.target.tagName.toLowerCase() === 'img') {
+    const index = Array.from(e.currentTarget.children).indexOf(e.target);
+    showTab(index);
+  }
+});
+
 function showTab(index) {
   const panels = document.querySelectorAll('.tab-panel');
+  const images = document.querySelectorAll('.tab-menu img');
+
   panels.forEach((panel, i) => {
-    panel.style.display = i === index ? 'block' : 'none';
+    if (i === index) panel.classList.add('active');
+    else panel.classList.remove('active');
+  });
+
+  images.forEach((img, i) => {
+    if (i === index) img.classList.add('active');
+    else img.classList.remove('active');
   });
 }
