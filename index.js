@@ -41,18 +41,36 @@ document.querySelector('.go-blog').addEventListener('click', function () {
 
 document.querySelector('.tab-menu').addEventListener('click', function (e) {
   if (e.target.tagName.toLowerCase() === 'img') {
-    const index = Array.from(e.currentTarget.children).indexOf(e.target);
+    const parentDiv = e.target.closest('.img-wrapper');
+    const index = Array.from(
+      e.currentTarget.querySelectorAll('.img-wrapper'),
+    ).indexOf(parentDiv);
+
+    // 화살표 아이콘의 위치를 변경
+    const arrowIcon = document.querySelector('.arrow-icon');
+    const targetTop =
+      parentDiv.offsetTop +
+      parentDiv.offsetHeight / 2 -
+      arrowIcon.offsetHeight / 2;
+    arrowIcon.style.top = `${targetTop}px`;
+
     showTab(index);
   }
 });
 
 function showTab(index) {
   const panels = document.querySelectorAll('.tab-panel');
-  const images = document.querySelectorAll('.tab-menu img');
+  const imgWrapper = document.querySelectorAll('.tab-menu .img-wrapper');
+  const images = document.querySelectorAll('.tab-menu img-wrapper img');
 
   panels.forEach((panel, i) => {
     if (i === index) panel.classList.add('active');
     else panel.classList.remove('active');
+  });
+
+  imgWrapper.forEach((img, i) => {
+    if (i === index) img.classList.add('active');
+    else img.classList.remove('active');
   });
 
   images.forEach((img, i) => {

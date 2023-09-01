@@ -7,7 +7,7 @@
 }
 
 html {
-  background-color: black;
+  background-color: rgb(57, 61, 61);
   color: white;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -145,7 +145,7 @@ h3 {
   left: 50%;
   width: 4px;
   height: 100%;
-  background-color: #333;
+  background-color: #242424;
 }
 
 .event {
@@ -159,7 +159,7 @@ h3 {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #333;
+  background-color: #242424;
   border-radius: 50%;
   left: -10px;
   top: 15px;
@@ -209,16 +209,30 @@ h3 {
 
 .tab-menu img {
   height: 5rem;
+  margin-top: 0.5rem;
   cursor: pointer;
   transition: all 0.5s ease;
+  width: 280px;
+}
+
+.img-wrapper {
+  position: relative;
 }
 
 .tab-menu img:hover {
-  transform: translateX(4rem);
+  transform: scale(1.1);
 }
 
-.tab-menu img.active {
-  transform: translateX(4rem);
+.arrow-icon {
+  position: absolute;
+  left: -5rem; /* 초기 위치 */
+  top: 14.5px; /* 계산된 중앙 위치 */
+  width: 62px;
+  height: 62px;
+  background-image: url('/imgs/arrow.png');
+  background-size: cover;
+  background-position: center;
+  transition: top 0.5s ease; /* top 위치가 변경될 때 애니메이션 효과 적용 */
 }
 
 .tab-panel {
