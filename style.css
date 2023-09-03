@@ -79,6 +79,10 @@ section {
   min-height: 100vh;
   width: 75vw;
   margin-left: 15vw;
+  display: flex; /* Flexbox 활성화 */
+  flex-direction: column;
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center; /* 세로 가운데 정렬 (선택 사항) */
 }
 
 footer {
@@ -186,7 +190,7 @@ h3 {
 }
 
 .event.left {
-  right: 11.5%;
+  right: 12%;
 }
 
 .event.left::before {
@@ -195,80 +199,34 @@ h3 {
 }
 
 /* 기술 스택 */
-.tab-wrap {
-  margin: 0 auto;
-  max-width: 800px;
-}
-.tab {
+
+.skill-list {
+  max-width: 1100px;
   display: flex;
+  flex-wrap: wrap;
 }
 
-.tab-menu {
+.skill-item {
+  width: 250px;
+  height: 200px;
+  margin: 8px; /* 상하좌우 간격 설정 */
   display: flex;
   flex-direction: column;
-  width: 20%;
-  margin: 0 5rem;
 }
 
-.tab-menu img {
-  height: 5rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  width: 280px;
-}
-
-.img-wrapper {
-  position: relative;
-}
-
-.tab-menu img:hover {
-  transform: scale(1.1);
-}
-
-.arrow-icon {
-  position: absolute;
-  left: -5rem; /* 초기 위치 */
-  top: 14.5px; /* 계산된 중앙 위치 */
-  width: 62px;
-  height: 62px;
-  background-image: url('/imgs/arrow.png');
-  background-size: cover;
-  background-position: center;
-  transition: top 0.5s ease; /* top 위치가 변경될 때 애니메이션 효과 적용 */
-}
-
-.tab-panel {
-  display: none;
-  animation: fadeIn 2s;
-  text-align: center;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.tab-panel.active {
-  display: block;
-}
-
-.tab-content {
-  margin-left: 5rem;
+.skill-description {
+  height: 200px;
+  padding: 1rem;
   background-color: #f3f3f3;
-  width: 60%;
-  border-radius: 1rem;
+  color: #333;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.tab-panel img {
-  height: 60px;
-  margin-top: 1rem;
+.skill-item > img {
+  height: 30%;
 }
 
+/* project */
 .project-content-list {
   background-color: #f3f3f3;
   border-radius: 1rem;
@@ -293,7 +251,6 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
 }
 
 #next,
@@ -317,7 +274,7 @@ h3 {
 .updown {
   border: 2px solid rgba(173, 173, 173, 0.651);
   border-radius: 10rem;
-  height: 450px;
+  height: 500px;
   margin: 0 1rem;
 }
 
