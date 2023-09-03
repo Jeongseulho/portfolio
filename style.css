@@ -325,3 +325,50 @@ h3 {
 .project-link h3:hover {
   color: #007bff;
 }
+
+.box {
+  width: 900px;
+  height: 250px;
+  background-color: #f3f3f3;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box img {
+  width: 450px;
+  height: 250px;
+}
+
+.blog-description,
+.github-description {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.blog-description > p,
+.github-description > p {
+  width: 100%;
+  line-height: 1.3rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.blog-description > h3,
+.github-description > h3 {
+  margin-top: 3rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.blog-description > h3:hover,
+.github-description > h3:hover {
+  color: #007bff;
+}
