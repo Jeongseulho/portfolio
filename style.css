@@ -168,7 +168,7 @@ h3 {
 
 .education-content {
   padding: 20px;
-  background-color: #f3f3f3;
+  background-color: #ffffff;
   position: relative;
   border-radius: 6px;
   color: #333;
@@ -195,9 +195,12 @@ h3 {
 }
 
 /* 기술 스택 */
+.tab-wrap {
+  margin: 0 auto;
+  max-width: 800px;
+}
 .tab {
   display: flex;
-  margin-left: 10rem;
 }
 
 .tab-menu {
@@ -257,11 +260,102 @@ h3 {
 .tab-content {
   margin-left: 5rem;
   background-color: #f3f3f3;
-  width: 40%;
+  width: 60%;
   border-radius: 1rem;
 }
 
 .tab-panel img {
   height: 60px;
   margin-top: 1rem;
+}
+
+.project-content-list {
+  background-color: #f3f3f3;
+  border-radius: 1rem;
+  color: #333;
+  display: flex;
+  margin: 0 3rem;
+  max-width: 952px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.project-content {
+  padding: 1rem;
+}
+
+.project-content img {
+  width: 426px;
+  height: 240px;
+}
+
+.project-content-list-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#next,
+#prev {
+  transition: all 0.5s ease;
+  opacity: 0;
+  cursor: default;
+}
+
+#next:hover,
+#prev:hover {
+  transform: scale(1.5);
+}
+
+#next.show,
+#prev.show {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.updown {
+  border: 2px solid rgba(173, 173, 173, 0.651);
+  border-radius: 10rem;
+  height: 450px;
+  margin: 0 1rem;
+}
+
+.project-content p {
+  line-height: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-link {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+/* 이 부분은 새로운 slide-item 클래스를 위한 스타일입니다. */
+.slide-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide-inner {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.project-link h3 {
+  text-decoration: underline;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+/* 글자 색상 변경 */
+.project-link h3:hover {
+  color: #007bff;
 }
