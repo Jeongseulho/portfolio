@@ -201,29 +201,38 @@ h3 {
 /* 기술 스택 */
 
 .skill-list {
-  max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 5vw;
 }
 
 .skill-item {
-  width: 250px;
-  height: 200px;
-  margin: 8px; /* 상하좌우 간격 설정 */
+  width: 300px;
+  height: 250px;
+  margin: 1rem; /* 상하좌우 간격 설정 */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f3;
+  border-radius: 0.5rem;
 }
 
 .skill-description {
-  height: 200px;
-  padding: 1rem;
-  background-color: #f3f3f3;
+  padding: 0.8rem;
   color: #333;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem;
+}
+
+.skill-description > p {
+  line-height: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .skill-item > img {
-  height: 30%;
+  height: 45px;
+  width: 150px;
+  margin-top: 0.5rem;
 }
 
 /* project */
